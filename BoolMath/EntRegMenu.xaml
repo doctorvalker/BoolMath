@@ -1,0 +1,27 @@
+﻿<Page x:Class="BoolMath.EntRegMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BoolMath"
+      mc:Ignorable="d" 
+      d:DesignHeight="640" d:DesignWidth="1280"
+      Title="EntRegMenu">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="6*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="32*"/>
+            <ColumnDefinition Width="16*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="EntryButton" Click ="EntryWin" Content="Вход" Grid.Column="1" Grid.Row="1" FontSize="40"/>
+        <Button x:Name="RegButton" Click="RegisWin" Content="Регистрация" Grid.Column="1" Grid.Row="3" FontSize="40"/>
+    </Grid>
+</Page>

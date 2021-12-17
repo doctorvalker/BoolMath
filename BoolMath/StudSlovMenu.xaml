@@ -1,0 +1,39 @@
+﻿<Page x:Class="BoolMath.StudSlovMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:BoolMath"
+      mc:Ignorable="d" 
+      d:DesignHeight="640" d:DesignWidth="1280"
+      Title="StudSlovMenu">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="8*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="16*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Назад" Grid.Column="1" Grid.Row="1"  FontSize="30" Click="Backward"/>
+        <Button Grid.ColumnSpan="3" Content="Проверить все тесты" Grid.Column="3" Grid.Row="3" FontSize="30" Click="SSRAll"/>
+        <TextBox x:Name="StudID" Grid.Column="3" Grid.Row="5" TextWrapping="Wrap" Text="Код ученика" FontSize="40" GotFocus="StudClear" Foreground="LightGray" LostFocus="StudFill"/>
+        <TextBox x:Name="TestID" Grid.Column="3" Grid.Row="7" TextWrapping="Wrap" Text="Код теста" FontSize="40" GotFocus="TestClear" Foreground="LightGray" LostFocus="TestFill"/>
+        <Button Content="Проверить ученика" Grid.Column="5" Grid.Row="5" FontSize="30" Click="SSRStud"/>
+        <Button Content="Проверить тест" Grid.Column="5" Grid.Row="7" FontSize="30" Click="SSRTest"/>
+    </Grid>
+</Page>

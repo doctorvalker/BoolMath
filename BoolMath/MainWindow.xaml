@@ -1,0 +1,36 @@
+﻿<Window x:Class="BoolMath.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BoolMath"
+        mc:Ignorable="d"
+        Title="MainMenu" Height="720" Width="1280" WindowStartupLocation="CenterScreen" ResizeMode = "NoResize" WindowStyle = "None">
+    <Grid MouseDown="MoveScreen">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="56*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="32*"/>
+        </Grid.RowDefinitions>
+        <Image Source="resources/Background.png" Grid.RowSpan="3" Grid.ColumnSpan="7"/>
+        <Button Click="HideWindow" ToolTip="Свернуть" Grid.Column="1" Grid.Row="1" Style="{StaticResource HFCButton}" Margin="0,21,0,0">
+            <Image Source="resources/HideOpen.png"/>
+        </Button>
+        <Button Click="WideWindow" ToolTip="Изменение размера" Grid.Column="3" Grid.Row="1" Style="{StaticResource HFCButton}">
+            <Image Source="resources/WideOpen.png"/>
+        </Button>
+        <Button Click="CloseApp" ToolTip="Закрыть" Grid.Column="5" Grid.Row="1" Style="{StaticResource HFCButton}">
+            <Image Source="resources/CloseWind.png"/>
+        </Button>
+        <Frame Grid.ColumnSpan="7" Grid.Row="2" x:Name="MainFrame" Source="EntRegMenu.xaml" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>
